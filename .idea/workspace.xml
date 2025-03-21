@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56158ea3-f057-4b99-b480-dfff84737bb1" name="Changes" comment="" />
+    <list default="true" id="56158ea3-f057-4b99-b480-dfff84737bb1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/qlsv/src/main/java/com/ngoclinh/qlsv/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/qlsv/src/main/java/com/ngoclinh/qlsv/entity/Student.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +83,7 @@
       <workItem from="1742304213154" duration="1246000" />
       <workItem from="1742344160998" duration="2614000" />
       <workItem from="1742362581692" duration="1520000" />
-      <workItem from="1742523699401" duration="450000" />
+      <workItem from="1742523699401" duration="1225000" />
     </task>
     <servers />
   </component>

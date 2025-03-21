@@ -30,7 +30,8 @@ public class Student {
 
     @Column(name = "phone", length = 20)
     private String phone;
-
+    @Column(name="Test")
+    private  int Test;
     @Column(name = "date_of_birth")
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;

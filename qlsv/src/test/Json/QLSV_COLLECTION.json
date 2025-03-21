@@ -1,0 +1,392 @@
+{
+  "info": {
+    "name": "QLSV API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Student API",
+      "item": [
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/students"
+          }
+        },
+        {
+          "name": "Get Student By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/students/{{studentId}}"
+          }
+        },
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/students",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentCode\":\"SV001\",\"fullName\":\"Nguyen Van A\",\"email\":\"nguyenvana@example.com\",\"phone\":\"0123456789\",\"dateOfBirth\":\"2000-01-01\"}"
+            }
+          }
+        },
+        {
+          "name": "Update Student",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/students/{{studentId}}",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"fullName\":\"Nguyen Van B\",\"email\":\"nguyenvanb@example.com\",\"phone\":\"0987654321\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete Student",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/students/{{studentId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Course API",
+      "item": [
+        {
+          "name": "Get All Courses",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/courses"
+          }
+        },
+        {
+          "name": "Get Course By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/courses/{{courseId}}"
+          }
+        },
+        {
+          "name": "Create Course",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/courses",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"courseCode\":\"CS101\",\"courseName\":\"Computer Science\",\"credit\":3}"
+            }
+          }
+        },
+        {
+          "name": "Update Course",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/courses/{{courseId}}",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"courseName\":\"Advanced Computer Science\",\"credit\":4}"
+            }
+          }
+        },
+        {
+          "name": "Delete Course",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/courses/{{courseId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Classroom API",
+      "item": [
+        {
+          "name": "Get All Classrooms",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/classrooms"
+          }
+        },
+        {
+          "name": "Get Classroom By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/classrooms/{{classroomId}}"
+          }
+        },
+        {
+          "name": "Create Classroom",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/classrooms",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"className\":\"Math 101\",\"courseId\":1,\"lecturerId\":2}"
+            }
+          }
+        },
+        {
+          "name": "Update Classroom",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/classrooms/{{classroomId}}",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"className\":\"Advanced Math 101\",\"courseId\":1,\"lecturerId\":3}"
+            }
+          }
+        },
+        {
+          "name": "Delete Classroom",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/classrooms/{{classroomId}}"
+          }
+        },
+        {
+          "name": "Assign Student to Classroom",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/classrooms/{{classroomId}}/students",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentId\":5}"
+            }
+          }
+        },
+        {
+          "name": "Assign Lecturer to Classroom",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/classrooms/{{classroomId}}/lecturer",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lecturerId\":3}"
+            }
+          }
+        },
+        {
+          "name": "Get Students in Classroom",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/classrooms/{{classroomId}}/students"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enrollment API",
+      "item": [
+        {
+          "name": "Get All Enrollments",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/enrollments"
+          }
+        },
+        {
+          "name": "Get Enrollment By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/enrollments/{{enrollmentId}}"
+          }
+        },
+        {
+          "name": "Create Enrollment",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/enrollments",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentId\":5,\"classroomId\":3}"
+            }
+          }
+        },
+        {
+          "name": "Update Enrollment",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/enrollments/{{enrollmentId}}",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentId\":5,\"classroomId\":4}"
+            }
+          }
+        },
+        {
+          "name": "Delete Enrollment",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/enrollments/{{enrollmentId}}"
+          }
+        },
+        {
+          "name": "Get Enrollments by Student ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/enrollments/student/{{studentId}}"
+          }
+        },
+        {
+          "name": "Get Enrollments by Classroom ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/enrollments/classroom/{{classroomId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Enrollment API",
+      "item": [
+        {
+          "name": "Enroll Student",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/enrollments",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentId\":1,\"classId\":1}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lecturer API",
+      "item": [
+        {
+          "name": "Get All Lecturers",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/lecturers"
+          }
+        },
+        {
+          "name": "Get Lecturer By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/lecturers/{{lecturerId}}"
+          }
+        },
+        {
+          "name": "Create Lecturer",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/lecturers",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lecturerCode\":\"GV001\",\"fullName\":\"Dr. Tran Van C\",\"email\":\"tranvanc@example.com\",\"phone\":\"0934567890\",\"department\":\"Computer Science\"}"
+            }
+          }
+        },
+        {
+          "name": "Update Lecturer",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/lecturers/{{lecturerId}}",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"fullName\":\"Dr. Tran Van D\",\"email\":\"tranvand@example.com\",\"phone\":\"0976543210\",\"department\":\"Software Engineering\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete Lecturer",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/lecturers/{{lecturerId}}"
+          }
+        },
+        {
+          "name": "Get Lecturers by Department",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/lecturers/department/{{department}}"
+          }
+        }
+      ]
+    }
+  ]
+}
